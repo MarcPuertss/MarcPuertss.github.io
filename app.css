@@ -1,0 +1,39 @@
+/* Estilo para la barra superior */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 100;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: left;
+    padding: 10px 20px;
+}
+
+.nav ul li {
+    margin-right: 20px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav ul li a.active {
+    color: #ff6347; /* Cambiar color cuando la sección esté activa */
+}
+
+/* Estilos para cada sección */
+.section {
+    padding-top: 60px; /* Espacio para que el contenido no quede cubierto por la barra */
+    height: 100vh; /* Para que cada sección ocupe toda la altura de la ventana */
+    scroll-snap-align: start;
+}
+
+/* Otras clases necesarias para tus secciones */

@@ -7,6 +7,29 @@
     background-color: #333;
     z-index: 100;
 }
+.home .title {
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.about .figure img {
+    border-radius: 50%;
+    max-width: 200px;
+    margin: 20px auto;
+}
+
+.main {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+.section {
+    scroll-snap-align: start;
+}
+
 
 .nav ul {
     display: flex;

@@ -51,8 +51,8 @@ a {
 }
 
 .nav-links li {
-    margin-left: 15px;
     position: relative;
+    margin: 0; /* Sin separación entre botones */
 }
 
 .nav-links a {
@@ -61,14 +61,14 @@ a {
     background: #444;
     color: white;
     font-weight: bold;
-    border-radius: 4px;
-    clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+    border-radius: 0;
+    clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .nav-links a:hover {
     background: #ff6347;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .nav-links a:active {
@@ -114,6 +114,10 @@ a {
     }
 
     .nav-links li {
-        margin: 10px 0;
+        margin: 0; /* Sin separación en móvil */
+    }
+
+    .nav-links a {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Forma rectangular en pantallas pequeñas */
     }
 }

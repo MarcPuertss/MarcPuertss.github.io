@@ -1,110 +1,103 @@
-/* Estilo para la barra superior */
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+/* Barra de navegación */
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background-color: #333;
-    z-index: 100;
-}
-.home .title {
-    text-align: center;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 8px;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.about .figure img {
-    border-radius: 50%;
-    max-width: 200px;
-    margin: 20px auto;
-}
-
-.main {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-}
-
-.section {
-    scroll-snap-align: start;
-}
-
-
-.nav ul {
+.navbar {
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.nav ul li {
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
     margin-right: 20px;
 }
 
-.nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    transition: color 0.3s ease;
+.nav-links a:hover {
+    color: #ff6347;
 }
 
-.nav ul li a.active {
-    color: #ff6347; /* Cambiar color cuando la sección esté activa */
+.name {
+    color: #ff6347;
+    font-size: 20px;
+    font-weight: 600;
 }
 
-/* Estilos para cada sección */
+/* Secciones */
 .section {
-    padding-top: 60px; /* Espacio para que el contenido no quede cubierto por la barra */
-    height: 100vh; /* Para que cada sección ocupe toda la altura de la ventana */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
     scroll-snap-align: start;
 }
 
-/* Transición de botones */
-.button a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff6347;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+#home {
+    background: linear-gradient(to bottom, #ff6347, #f08080);
+    color: white;
 }
 
-.button a:hover {
-    background-color: #e55337;
+#about {
+    background: #f4f4f4;
+    color: #333;
 }
 
-/* Animaciones de scroll */
-.section {
-    animation: fadeIn 1s ease-in-out;
+#works {
+    background: #333;
+    color: white;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+#contact {
+    background: #ff6347;
+    color: white;
 }
 
-/* Mobile-first approach */
-@media screen and (max-width: 768px) {
-    .nav ul {
+/* Responsivo */
+@media (max-width: 768px) {
+    .nav-links {
         flex-direction: column;
         align-items: center;
     }
 
-    .section {
-        padding: 20px;
-        height: auto;
+    .navbar {
+        flex-direction: column;
     }
 
-    .about img {
-        width: 80%;
+    .nav-links li {
+        margin: 10px 0;
     }
 }
-
-/* Otras clases necesarias para tus secciones */

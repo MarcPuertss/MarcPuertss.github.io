@@ -4,161 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marc Puertas portfolio</title>
+    <title>Marc Puertas Portfolio</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="icon" href="./fotos/logo.png" type="image/png">
-    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="cursor-dot" data-cursor-dot></div>
-    <div class="light-mask" data-light-mask></div>
+    <!-- Barra de navegación -->
     <header class="header">
-        <h1 class="h1"><a href="" title="Marc Puertas" class="a">Marc Puertas</a></h1>
-        <nav class="nav">
-            <ul class="ul">
-                <li class="li"><a href="#home" title="Home" class="a">HOME</a></li>
-                <li class="li"><a href="#about" title="About" class="a">ABOUT</a></li>
-                <li class="li"><a href="#works" title="Works" class="a">WORKS</a></li>
-                <li class="li"><a href="#contact" title="Contact" class="a">CONTACT</a></li>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT ME</a></li>
+                <li><a href="#works">WORKS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
+            <div class="name">Marc Puertas</div>
         </nav>
     </header>
 
-    <main class="main">
-        <section class="section home" id="home">
-            <div class="title">
-                <div class="title-container">
-                    <h1 class="h1 parallax-title-h1">Marc Puertas</h1>
-                    <h2 class="h2 parallax-title-h2">Software Engineering</h2>
-                </div>
-            </div>
-            <div class="parallax-container">
-                <img src="./fotos/Background.png" alt="skyparallax" class="parallax-item-background">
-                <img src="./fotos/mountain.png" alt="mountain parallax" class="parallax-item-mountain">
-            </div>
+    <!-- Contenido principal -->
+    <main>
+        <section id="home" class="section">
+            <h1>Welcome to my Portfolio</h1>
         </section>
 
-        <section class="section about" id="about">
-            <div class="center-text">
-                <h6 class="h6">About me</h6>
-                <h2 class="h2"><span class="span">Marc Puertas&nbsp;</span>— SOFTWARE ENGINEERING</h2>
-
-                <figure class="figure">
-                    <img src="C:\Users\Marc Puertas\Pictures\Marc_Puertas_CV.jpg" alt="Marc Puertas's image" class="img">
-                    <h5 class="h5"><span class="span">Marc Puertas&nbsp;</span>
-                        — Based in <span class="green">Sant Feliu de Llobregat</span>, Barcelona&nbsp;
-                        — Currently studying 4th year of Software Engineering at the <span class="green">Polytechnic University of Catalonia</span>.
-                    </h5>
-                </figure>
-                <div class="text">
-                    <p class="p-left">
-                        I am <span id="age"></span> years old and an enthusiastic student of <em>Computer Engineering</em> with
-                        a strong passion for creativity and technological innovation.
-                        Technology's ability to reshape our world has fascinated me from a young age.
-                        <br><br>
-                        My main goal is to become a <strong>full-stack developer</strong> capable of creating solutions and solving various problems. To achieve this,
-                        I am highly interested in a <strong>internship</strong> that can provide me with valuable learning opportunities.
-                    </p>
-                    <p class="p-right">
-                        Through my journey in learning programming, I've gained a comprehensive range of skills beyond just programming languages.
-                        I've developed the strong ability <strong>to tackle challenges head-on</strong>.
-                        <br><br>
-                        In addition, my dedication to continuous learning has led me to explore various <em>technologies, frameworks, and tools</em>, enabling me to adapt and thrive in a fast-paced technological landscape.
-                    </p>
-                </div>
-
-                <button class="button">
-                    <a href="./fotos/curriculum.pdf" target="_blank" class="a">
-                        <span class="span">My resume</span>
-                    </a>
-                </button>
-            </div>
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>Hi, I'm Marc Puertas, a passionate software engineering student...</p>
         </section>
 
-        <section class="section works" id="works">
-            <h6 class="h6">Works</h6>
-            <div class="grid">
-                <article class="article work-item">
-                    <div class="work-text">
-                        <h2 class="h2">Decentralized Voting System</h2>
-                        <p>
-                            I envisioned developing a decentralized voting system using blockchain technology,
-                            but for this project, I implemented a conventional database to explore what kind of data would need to be stored.
-                            This helped me understand the structure required for a future blockchain implementation.
-                        </p>
-
-                        <h5 class="h5">Objectives</h5>
-                        <ul class="objectives">
-                            <li>Create an intuitive interface to manage large sets of data.</li>
-                            <li>Develop a script to generate and populate a database with millions of records.</li>
-                            <li>Simulate a secure voting system where votes can be reviewed on a "blockchain".</li>
-                            <li>Create two user roles: one who can generate votes (administrator) and another who can vote (member).</li>
-                        </ul>
-
-                        <h5 class="h5">What I Learned</h5>
-                        <p>
-                            One of the most valuable lessons I learned in this project was how to efficiently handle large amounts of data.
-                            By developing a script that generated millions of records and implementing a system capable of managing these volumes,
-                            I gained a deep understanding of the challenges and strategies involved in large-scale data management.
-                        </p>
-
-                        <h5 class="h5">Technologies Used</h5>
-                        <ul class="technologies">
-                            <li>Node.js</li>
-                            <li>Express.js</li>
-                            <li>Vue.js</li>
-                            <li>PostgreSQL</li>
-                            <li>JavaScript</li>
-                            <li>Python</li>
-                        </ul>
-                    </div>
-                </article>
-            </div>
+        <section id="works" class="section">
+            <h2>Works</h2>
+            <p>Here are some of my featured projects.</p>
         </section>
 
-        <section class="section contact" id="contact">
-            <h6 class="h6">Contact</h6>
-            <!-- Agrega tu sección de contacto aquí -->
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Feel free to reach out to me through email or social media.</p>
         </section>
     </main>
-
-    <script>
-        // Función para agregar/quitar la clase 'active' en los enlaces del menú
-        const sections = document.querySelectorAll('.section');
-        const navLinks = document.querySelectorAll('.nav ul li a');
-
-        window.addEventListener('scroll', () => {
-            let currentSection = "";
-
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 60) { // Cambiar valor para ajustar cuando se activa el enlace
-                    currentSection = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${currentSection}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-        // Hacer que al hacer clic en un enlace se haga scroll hasta la sección
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const target = document.querySelector(link.getAttribute('href'));
-                target.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-    </script>
 </body>
 
 </html>

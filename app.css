@@ -23,7 +23,7 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #333;
+    background-color: #003366; /* Azul oscuro */
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -38,36 +38,40 @@ a {
 }
 
 .name {
-    color: #ff6347;
+    color: #00c7ff; /* Azul celeste */
     font-size: 24px;
     font-weight: 600;
     text-transform: uppercase;
 }
 
-/* Estilo de los botones en forma de flecha */
+/* Estilo de los botones en forma de panel continuo */
 .nav-links {
     display: flex;
     list-style: none;
 }
 
 .nav-links li {
-    position: relative;
     margin: 0; /* Sin separación entre botones */
 }
 
 .nav-links a {
     display: block;
     padding: 10px 20px;
-    background: #444;
+    background: #005f99; /* Azul medio */
     color: white;
     font-weight: bold;
-    border-radius: 0;
-    clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+    text-transform: uppercase;
+    border-right: 2px solid #003366; /* Separación visual */
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
+.nav-links a:last-child {
+    border-right: none; /* Sin borde derecho en el último botón */
+}
+
 .nav-links a:hover {
-    background: #ff6347;
+    background: #00c7ff; /* Azul celeste */
+    color: #003366; /* Azul oscuro */
     transform: scale(1.05);
 }
 
@@ -87,7 +91,7 @@ a {
 }
 
 #home {
-    background: linear-gradient(to bottom, #ff6347, #f08080);
+    background: linear-gradient(to bottom, #00c7ff, #005f99);
     color: white;
 }
 
@@ -97,12 +101,12 @@ a {
 }
 
 #works {
-    background: #333;
+    background: #003366;
     color: white;
 }
 
 #contact {
-    background: #ff6347;
+    background: #005f99;
     color: white;
 }
 
@@ -118,6 +122,11 @@ a {
     }
 
     .nav-links a {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Forma rectangular en pantallas pequeñas */
+        border-right: none; /* Sin bordes en pantallas pequeñas */
+        border-bottom: 2px solid #003366; /* Separación visual vertical */
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none; /* Sin borde inferior en el último botón */
     }
 }

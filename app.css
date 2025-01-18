@@ -8,7 +8,10 @@
 body {
     font-family: 'Lora', serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background: url('ruta-de-tu-imagen.jpg') no-repeat center center fixed; /* Imagen de fondo */
+    background-size: cover; /* Escala la imagen para que cubra toda la pantalla */
+    cursor: url('sources/Cohete_clicker.png'), auto;
+    overflow-x: hidden;
 }
 
 a {
@@ -23,7 +26,7 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #003366; /* Azul oscuro */
+    background-color: rgba(0, 51, 102, 0.8); /* Azul oscuro con transparencia */
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -44,7 +47,7 @@ a {
     text-transform: uppercase;
 }
 
-/* Estilo de los botones en forma de panel continuo */
+/* Botones en forma de panel continuo */
 .nav-links {
     display: flex;
     list-style: none;
@@ -57,11 +60,11 @@ a {
 .nav-links a {
     display: block;
     padding: 10px 20px;
-    background: #005f99; /* Azul medio */
+    background: rgba(0, 95, 153, 0.9); /* Azul medio con algo de transparencia */
     color: white;
     font-weight: bold;
     text-transform: uppercase;
-    border-right: 2px solid #003366; /* Separación visual */
+    border-right: 2px solid rgba(0, 51, 102, 0.9); /* Separación visual */
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
@@ -88,26 +91,8 @@ a {
     text-align: center;
     padding: 20px;
     scroll-snap-align: start;
-}
-
-#home {
-    background: linear-gradient(to bottom, #00c7ff, #005f99);
     color: white;
-}
-
-#about {
-    background: #f4f4f4;
-    color: #333;
-}
-
-#works {
-    background: #003366;
-    color: white;
-}
-
-#contact {
-    background: #005f99;
-    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la visibilidad del texto */
 }
 
 /* Responsivo */
@@ -123,7 +108,7 @@ a {
 
     .nav-links a {
         border-right: none; /* Sin bordes en pantallas pequeñas */
-        border-bottom: 2px solid #003366; /* Separación visual vertical */
+        border-bottom: 2px solid rgba(0, 51, 102, 0.9); /* Separación visual vertical */
     }
 
     .nav-links a:last-child {

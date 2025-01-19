@@ -7,8 +7,7 @@ body {
     color: #003366; /* Azul oscuro */
     line-height: 1.6;
 }
-
-/* Barra de navegación */
+/* Barra de navegación superior */
 .header {
     position: fixed;
     top: 0;
@@ -17,7 +16,14 @@ body {
     background-color: rgba(0, 51, 102, 0.8); /* Azul oscuro con transparencia */
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Animación suave usando transform */
+    transform: translateY(-100%); /* Inicialmente fuera de la pantalla */
 }
+
+.header.active {
+    transform: translateY(0); /* Cuando tiene la clase active, se desliza hacia abajo */
+}
+
 
 .navbar {
     display: flex;
@@ -29,13 +35,13 @@ body {
 }
 
 .name {
-    color: #00c7ff; /* Azul celeste */
+    color: #00c7ff;
     font-size: 24px;
     font-weight: 600;
     text-transform: uppercase;
 }
 
-/* Botones en forma de panel continuo */
+/* Estilos de los enlaces de navegación */
 .nav-links {
     display: flex;
     list-style: none;
@@ -44,30 +50,71 @@ body {
 }
 
 .nav-links li {
-    margin: 0; /* Sin separación entre botones */
+    margin: 0;
 }
 
 .nav-links a {
     display: block;
-    padding: 15px 25px; /* Más grande para mejor clicabilidad */
-    background: rgba(0, 95, 153, 0.9); /* Azul medio con algo de transparencia */
+    padding: 15px 25px;
+    background: rgba(0, 95, 153, 0.9);
     color: white;
     font-weight: bold;
     text-transform: uppercase;
-    border-right: 2px solid rgba(0, 51, 102, 0.9); /* Línea entre los botones */
+    border-right: 2px solid rgba(0, 51, 102, 0.9);
     transition: background 0.3s ease, transform 0.2s ease;
     text-decoration: none;
 }
 
 .nav-links a:last-child {
-    border-right: none; /* Elimina el borde del último botón */
+    border-right: none;
 }
 
 .nav-links a:hover {
-    background: #00c7ff; /* Azul celeste al pasar el ratón */
-    color: #003366; /* Azul oscuro para contraste */
-    transform: scale(1.05); /* Efecto de zoom */
+    background: #00c7ff;
+    color: #003366;
+    transform: scale(1.05);
 }
+
+/* Barra lateral (oculta por defecto) */
+/* Barra lateral (oculta por defecto) */
+.side-nav {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Inicialmente fuera de la pantalla */
+    width: 250px;
+    height: 100%;
+    background-color: rgba(0, 51, 102, 0.8);
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease; /* Animación suave */
+}
+
+.side-nav.active {
+    right: 0; /* Cuando está activa, se desliza desde la derecha */
+}
+
+.side-nav .nav-links {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.side-nav .nav-links li {
+    margin: 0;
+}
+
+.side-nav .nav-links a {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #003366;
+}
+
+.side-nav .nav-links a:hover {
+    background: #00c7ff;
+    color: #003366;
+}
+
+
 
 /* Sección Home */
 .home-section {
@@ -170,6 +217,88 @@ body {
     transform: translateY(-2px);
 }
 
+/* Sección About Me */
+.about-section {
+    padding: 80px 20px;
+    background-color: #f0f8ff; /* Azul claro */
+    color: #003366; /* Azul oscuro */
+}
+
+.about-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.about-title {
+    text-align: left;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.about-title h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #003366;
+    margin: 0;
+}
+
+.about-title h2::after {
+    content: "";
+    display: block;
+    width: 100px; /* Longitud de la línea */
+    height: 4px; /* Grosor de la línea */
+    background: #00c7ff; /* Azul celeste */
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.about-info {
+    flex: 1;
+    padding-right: 60px; /* Espacio entre el texto y la línea */
+    position: relative;
+}
+
+.about-info::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0; /* La línea queda alineada al contenedor */
+    width: 4px;
+    height: 100%;
+    background: #00c7ff;
+    border-radius: 2px;
+}
+
+.about-info p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #333; /* Gris oscuro */
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    width: 400px;
+    height: 583px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar la imagen */
+}
+
+
 /* Responsivo */
 @media (max-width: 768px) {
     .navbar {
@@ -207,4 +336,28 @@ body {
         width: 200px;
         height: 200px;
     }
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-info {
+        border-right: none;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .about-image {
+        margin-top: 20px;
+    }
 }
+
+/* Works
+    - IA HEX
+    - MEMORY
+    - C4 THE GAME
+    - PETSALUT
+    - MULTICHANNEL CHAT
+    - 3D GARAGE
+
+    */

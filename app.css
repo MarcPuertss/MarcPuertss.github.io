@@ -33,6 +33,24 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
+.name_sidebar{
+    color:#ffffff;
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase; 
+    text-align: center;
+}
+
+.name_sidebar::after {
+    content: "";
+    display: block;
+    width: 435px; /* Longitud de la línea */
+    height: 4px; /* Grosor de la línea */
+    background: #00c7ff; /* Azul celeste */
+    margin-top: 8px;
+    border-radius: 2px;
+}
 
 .name {
     color: #00c7ff;
@@ -76,7 +94,6 @@ body {
 }
 
 /* Barra lateral (oculta por defecto) */
-/* Barra lateral (oculta por defecto) */
 .side-nav {
     position: fixed;
     top: 0;
@@ -93,25 +110,96 @@ body {
     right: 0; /* Cuando está activa, se desliza desde la derecha */
 }
 
+/* Barra lateral (oculta por defecto) */
+.side-nav {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Inicialmente fuera de la pantalla */
+    width: 250px;
+    height: 100%;
+    background-color: rgba(0, 51, 102, 0.9); /* Color de fondo más oscuro */
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombras para el efecto de profundidad */
+    transition: right 0.3s ease; /* Animación suave */
+    display: flex;
+    flex-direction: column; /* Organizar los elementos de arriba hacia abajo */
+}
+
+/* Estilos para los enlaces dentro de la barra lateral */
 .side-nav .nav-links {
+    display: flex;
     flex-direction: column;
+    list-style: none;
     margin: 0;
     padding: 0;
+    width: 100%; /* Asegurarse que los botones ocupen todo el ancho */
 }
 
+/* Estilo para cada botón en la barra lateral */
 .side-nav .nav-links li {
-    margin: 0;
+    margin: 15px 0; /* Separación entre botones */
 }
 
+/* Estilo de los enlaces */
 .side-nav .nav-links a {
-    padding: 20px;
+    display: block;
+    padding: 15px 20px;
     text-align: center;
-    border-bottom: 1px solid #003366;
+    background-color: #003366; /* Color de fondo */
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 8px; /* Bordes redondeados */
+    transition: all 0.3s ease; /* Animación suave */
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras sutiles para efecto de profundidad */
 }
 
+/* Efecto hover en los botones */
 .side-nav .nav-links a:hover {
-    background: #00c7ff;
-    color: #003366;
+    background-color: #00c7ff; /* Fondo azul claro al pasar el ratón */
+    color: #003366; /* Texto en color oscuro al pasar el ratón */
+    transform: translateY(-4px); /* Efecto de "subir" al pasar el ratón */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+}
+
+/* Efecto activo del botón (cuando se está en la sección) */
+.side-nav .nav-links a.active {
+    background-color: #00c7ff; /* Fondo azul claro para el enlace activo */
+    color: #003366; /* Texto en color oscuro cuando está activo */
+    transform: scale(1.05); /* Efecto de tamaño para indicar que es el enlace activo */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en el activo */
+}
+
+/* Estilo para los enlaces sociales */
+.side-nav .social-links {
+    margin-top: auto; /* Asegura que los iconos queden al final */
+    display: flex; /* Usamos flexbox para alinear los iconos */
+    justify-content: center; /* Centramos los iconos horizontalmente */
+    gap: 15px; /* Espacio entre los iconos */
+    padding: 20px 0; /* Espaciado para separar los iconos de los otros enlaces */
+}
+
+/* Estilo para los iconos de las redes sociales */
+.side-nav .social-icon {
+    display: block;
+    width: 40px; /* Tamaño más pequeño */
+    height: 40px; /* Tamaño más pequeño */
+    background-color: #003366; /* Fondo oscuro */
+    color: white;
+    font-size: 20px; /* Ajustamos el tamaño del icono */
+    border-radius: 50%; /* Botón circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto hover para los iconos sociales */
+.side-nav .social-icon:hover {
+    background-color: #00c7ff; /* Cambio a azul claro al pasar el ratón */
+    transform: scale(1.1); /* Aumenta el tamaño del icono al pasar el ratón */
 }
 
 

@@ -67,3 +67,13 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
+function copyToClipboard() {
+    const emailInput = document.getElementById("email");
+    emailInput.select();
+    emailInput.setSelectionRange(0, 99999); // Para móviles
+    navigator.clipboard.writeText(emailInput.value).then(() => {
+        alert("Email copied to clipboard!");
+    });
+}
+

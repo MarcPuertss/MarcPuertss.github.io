@@ -386,6 +386,110 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar la imagen */
 }
 
+/* Sección de Proyectos */
+.works-section {
+    padding: 50px 30px;  /* Añadir margen en la parte superior, inferior, izquierda y derecha */
+    background-color: #f4f4f4;
+    text-align: center;
+    margin-left: 30px; /* Margen izquierdo */
+    margin-right: 30px; /* Margen derecho */
+}
+.works-title {
+    text-align: left;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.works-title h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #003366;
+    margin: 0;
+}
+
+.works-title h2::after {
+    content: "";
+    display: block;
+    width: 100px; /* Longitud de la línea */
+    height: 4px; /* Grosor de la línea */
+    background: #00c7ff; /* Azul celeste */
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* 2 columnas */
+    grid-template-rows: repeat(3, 1fr);     /* 3 filas */
+    gap: 30px;
+    margin-top: 30px;
+    margin-left: auto;   /* Para centrar el contenido */
+    margin-right: 200px;  /* Para centrar el contenido */
+    max-width: calc(100% - 60px); /* Evitar que toque los bordes, 60px es la suma de los márgenes izquierdo y derecho */
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    text-align: left;
+}
+
+.project-card h3 {
+    color: #003366;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.project-description,
+.technologies {
+    font-size: 16px;
+    color: #555;
+}
+
+.carousel {
+    position: relative;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.media-image,
+.work-video {
+    width: 100%;
+    border-radius: 8px;
+}
 
 /* Responsivo */
 @media (max-width: 768px) {
@@ -437,6 +541,13 @@ body {
 
     .about-image {
         margin-top: 20px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;  /* 1 columna en pantallas pequeñas */
+        margin-left: 20px;   /* Ajustar margen para pantallas más pequeñas */
+        margin-right: 20px;  /* Ajustar margen para pantallas más pequeñas */
+        max-width: calc(100% - 40px); /* Ajustar max-width para pantallas más pequeñas */
     }
 }
 

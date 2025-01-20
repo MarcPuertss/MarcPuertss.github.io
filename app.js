@@ -31,3 +31,39 @@ document.addEventListener('DOMContentLoaded', function () {
     // Agregar evento de scroll para comprobar la sección activa al hacer scroll
     window.addEventListener('scroll', checkActiveSection);
 });
+
+// Función para mover el carrusel
+function moveSlide(step, carouselId) {
+    const carousel = document.getElementById(carouselId);
+    const items = carousel.getElementsByClassName('carousel-item');
+    let currentIndex = -1;
+
+    for (let i = 0; i < items.length; i++) {
+        if (items[i].style.display === 'block') {
+            currentIndex = i;
+            break;
+        }
+    }
+
+    if (currentIndex === -1) {
+        items[0].style.display = 'block';
+        return;
+    }
+
+    items[currentIndex].style.display = 'none';
+
+    const nextIndex = (currentIndex + step + items.length) % items.length;
+
+    items[nextIndex].style.display = 'block';
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const carousels = document.querySelectorAll('.carousel');
+    carousels.forEach(carousel => {
+        const items = carousel.getElementsByClassName('carousel-item');
+        if (items.length > 0) {
+            items[0].style.display = 'block';
+        }
+    });
+});
+

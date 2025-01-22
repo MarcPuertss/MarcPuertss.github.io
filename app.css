@@ -389,7 +389,7 @@ body {
 /* Sección de Proyectos */
 .works-section {
     padding: 50px 20px;
-    background-image: url("sources/background.jpg");
+    background-image: url("sources/920.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -409,7 +409,7 @@ body {
 .works-title h2 {
     font-size: 3rem;
     font-weight: bold;
-    color: #003366;
+    color: #ffffff;
     margin: 0;
 }
 
@@ -523,21 +523,37 @@ body {
 }
 
 
+/* Estilos generales de la sección de contacto */
+/* Estilos generales de la sección de contacto */
 .contact-section {
-    padding: 80px 20px;
-    background-color: #f0f8ff; /* Azul claro */
-    color: #003366; /* Azul oscuro */
+    padding: 50px 20px;
+    background-image: url("sources/920.jpg"); /* Mismo fondo que la sección Works */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #003366; /* Asegura que el texto sea legible sobre la imagen */
 }
 
+/* Contenedor azul cielo */
 .contact-container {
-    max-width: 1600px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos de arriba hacia abajo */
+    justify-content: center; /* Centrado de los elementos verticalmente */
+    align-items: center; /* Centrado de los elementos horizontalmente */
+    background-color: #f0f8ff; /* Azul claro */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 40px; /* Espaciado interno */
+    max-width: 600px; /* Ancho máximo del cuadro */
+    width: 100%; /* Ajusta el contenedor al ancho máximo, con límite */
+    margin: 0 auto; /* Centra el contenedor en la página */
+    margin-left: 25%; /* Mueve el contenedor ligeramente hacia la izquierda */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para realce */
 }
 
+/* Título de la sección */
 .contact-title {
-    text-align: left;
+    text-align: center;
     margin-bottom: 40px;
-    position: relative;
 }
 
 .contact-title h2 {
@@ -550,43 +566,24 @@ body {
 .contact-title h2::after {
     content: "";
     display: block;
-    width: 383px; /* Longitud de la línea */
+    width: 430px; /* Longitud de la línea */
     height: 4px; /* Grosor de la línea */
     background: #00c7ff; /* Azul celeste */
     margin-top: 10px;
     border-radius: 2px;
 }
 
-/* Estilos generales de la sección de contacto */
-.contact-section {
-    padding: 50px 20px;
-    background-color: #f5f5f5;
-}
-
-.contact-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #003366;
-}
-
-/* Contenedor de la caja del correo */
-.contact-container {
-    display: flex;
-    margin-top: 20px;
-    margin-left: 200px; /* Mueve las tarjetas más a la izquierda */
-    margin-right: auto; /* Mantiene el contenedor centrado */
-}
 
 /* Estilo del cuadro de correo */
 .email-box {
-    display: flex;
     align-items: center;
-    margin-right: 10px;
     border: 2px solid #003366;
     border-radius: 5px;
     overflow: hidden;
+    margin-top: 15px;
+    width: 364.5px;
     background-color: #ffffff;
- 
+    margin-left: 10%;
 }
 
 .email-box input {
@@ -594,11 +591,10 @@ body {
     font-size: 16px;
     border: none;
     outline: none;
-    width: 300px;
+    width: 270px;
     color: #003366;
     background-color: transparent;
     cursor: text;
-    
 }
 
 .email-box input:focus {

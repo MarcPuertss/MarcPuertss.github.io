@@ -806,7 +806,7 @@ body {
     .about-image {
         margin-top: 20px;
         align-items: center;
-        margin-left: 15%;
+        margin-left: 5%;
     }
 
     .projects-container {
@@ -876,7 +876,7 @@ body {
 
     .copy-btn {
         padding: 10px;
-        margin-left: 1.65%;
+        margin-left: 1.5%;
         background-color: #003366;
         color: #ffffff;
         font-size: 14px; /* Fuente más pequeña */

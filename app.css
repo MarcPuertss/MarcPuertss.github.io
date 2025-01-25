@@ -806,7 +806,7 @@ body {
     .about-image {
         margin-top: 20px;
         align-items: center;
-        margin-left: 5%;
+        margin-left: 0%;
     }
 
     .projects-container {
@@ -854,13 +854,13 @@ body {
     }
 
     .email-box {
-        margin-left: -16%;
+        margin-left: -9%;
         border: 2px solid #003366;
         border-radius: 5px;
         overflow: hidden;
         margin-top: 15px;
-        width: 125%; /* Hacer el cuadro de correo más grande */
-        max-width: 125%;
+        width: 110%; /* Hacer el cuadro de correo más grande */
+        max-width: 110%;
         background-color: #ffffff;
 
     }

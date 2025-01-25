@@ -287,17 +287,12 @@ body {
 /* Estilos de botones específicos */
 .linkedin {
     background-color: #0072b1; /* Azul LinkedIn */
-    margin-left: 15px;
+    margin-left: 70px;
 }
 
 .github {
     background-color: #333; /* Negro GitHub */
-    margin-left: 15px;
-}
-
-.resume {
-    background-color: #6f7288; /* 1c2149 */
-    margin-left: 15px;
+    margin-left: 70px;
 }
 
 .button:hover {
@@ -619,25 +614,145 @@ body {
 }
 
 
+/* Agregar estilo para el menú hamburguesa */
+.menu-icon {
+    display: none; /* Solo aparecerá en pantallas pequeñas */
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff; /* Ajusta según el diseño */
+    margin-right: 20px;
+}
 
-/* Responsivo */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        text-align: center;
+    /* Mostrar el menú hamburguesa en pantallas pequeñas */
+    .menu-icon {
+        display: block;
     }
 
+    /* Ocultar enlaces en la barra superior */
     .nav-links {
+        display: none; /* Ocultamos los enlaces de la barra superior en pantallas pequeñas */
+    }
+
+    /* Mostrar enlaces cuando la barra lateral está activa */
+    .side-nav {
+        position: fixed;
+        top: 0;
+        right: -250px; /* Inicialmente fuera de la pantalla a la derecha */
+        width: 250px;
+        height: 100%;
+        background-color: rgba(0, 51, 102, 0.9); /* Fondo oscuro */
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease; /* Animación suave */
+        display: flex;
         flex-direction: column;
     }
 
-    .nav-links a {
-        border-right: none;
-        border-bottom: 2px solid rgba(0, 51, 102, 0.9);
+    /* Cuando la barra lateral está activa, se desliza desde la derecha */
+    .side-nav.active {
+        right: 0;
     }
 
+    /* Contenedor del nombre dentro de la barra lateral */
+    .side-nav .name-container {
+        text-align: center;
+        margin-top: 30px; /* Espacio para que no esté pegado al borde superior */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+    }
+
+    /* Estilo del nombre dentro de la barra lateral */
+    .side-nav .name {
+        font-size: 1.5rem;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    /* Estilo de los enlaces en la barra lateral */
+    .side-nav .nav-links {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .side-nav .nav-links li {
+        margin: 15px 0; /* Separación entre enlaces */
+    }
+
+    .side-nav .nav-links a {
+        padding: 15px 20px;
+        text-align: center;
+        background-color: #003366;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        text-transform: uppercase;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Efecto hover en los enlaces de la barra lateral */
+    .side-nav .nav-links a:hover {
+        background-color: #00c7ff;
+        color: #003366;
+        transform: translateY(-4px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Enlace activo dentro de la barra lateral */
+    .side-nav .nav-links a.active {
+        background-color: #00c7ff;
+        color: #003366;
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Mostrar el menú hamburguesa en pantallas pequeñas */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Aseguramos que el nombre esté centrado en la barra superior */
+    .navbar .name {
+        flex: 1;
+        text-align: center;
+        font-size: 2rem;
+        position: relative;
+    }
+
+    .navbar .name::after {
+        content: '';
+        display: block;
+        width: 40%;
+        height: 2px;
+        background-color: #87CEEB; /* Azul cielo */
+        margin: 0 auto;
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        right: 0;
+    }
+    
     .home-container {
         flex-direction: column;
+    }
+
+    .profile-image img {
+        border-radius: 70%;
+        width: 275px;
+        height: 275px;
+        object-fit: cover;
+        border: 4px solid #00c7ff; /* Azul celeste */
     }
 
     .profile-info {
@@ -647,29 +762,51 @@ body {
 
     .name {
         font-size: 2.5rem;
+        align-items: center;
+        
     }
 
     .role {
         font-size: 1.2rem;
+        align-items: center;
+        margin-left: 0%;
+        margin-top: 15px;
+        font-weight: bold;
+        color: white; /* Color del texto */
+        text-shadow: 
+            1px 1px 0 #000000,   /* Sombra para el borde 1 (efecto exterior) */
+            -1px -1px 0 #070707, /* Sombra para el borde 2 (efecto exterior) */
+            1px -1px 0 #24292e, 
+            -1px 1px 0 #24292e; 
     }
-
-    .profile-image img {
-        width: 200px;
-        height: 200px;
-    }
+    
+    
     .about-content {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start; /* Alinea todo el contenido a la izquierda */
     }
-
+    
     .about-info {
+        text-align: left; /* Alinea el texto a la izquierda */
+        padding-right: 20px;
         border-right: none;
-        padding-right: 0;
-        text-align: center;
+    }
+    
+    .about-info::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0; /* La línea queda alineada al contenedor */
+        width: 4px;
+        height: 100%;
+        background: #00c7ff;
+        border-radius: 2px;
     }
 
     .about-image {
         margin-top: 20px;
+        align-items: center;
+        margin-left: 15%;
     }
 
     .projects-container {
@@ -678,14 +815,80 @@ body {
         margin-right: 20px;  /* Ajustar margen para pantallas más pequeñas */
         max-width: calc(100% - 40px); /* Ajustar max-width para pantallas más pequeñas */
     }
+
+    .contact-section {
+        padding: 30px 15px; /* Menos padding para pantallas pequeñas */
+        background-image: url("sources/920.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        color: #003366;
+    }
+
+    .contact-container {
+        background-color: #f0f8ff;
+        border-radius: 15px;
+        padding: 25px; /* Espaciado ajustado */
+        max-width: 100%; /* Ancho al 100% */
+        width: 90%; /* Ajusta el ancho para pantallas más pequeñas */
+        margin: 0 auto;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-title {
+        text-align: left; /* Alinea el título a la izquierda */
+        margin-bottom: 20px;
+    }
+
+    .contact-title h2 {
+        font-size: 2rem; /* Tamaño de fuente ajustado */
+        font-weight: bold;
+        color: #003366;
+        margin: 0;
+    }
+
+    .contact-title h2::after {
+        width: 100%; /* Línea más corta para pantallas pequeñas */
+        height: 2px; /* Grosor de la línea */
+        margin-top: 10px;
+    }
+
+    .email-box {
+        margin-left: -16%;
+        border: 2px solid #003366;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-top: 15px;
+        width: 125%; /* Hacer el cuadro de correo más grande */
+        max-width: 125%;
+        background-color: #ffffff;
+
+    }
+
+    .email-box input {
+        padding: 10px;
+        font-size: 14px; /* Tamaño de fuente más pequeño */
+        width: calc(100% - 110px); /* Ajusta el tamaño del input */
+        color: #003366;
+        background-color: transparent;
+        cursor: text;
+    }
+
+    .copy-btn {
+        padding: 10px;
+        margin-left: 1.65%;
+        background-color: #003366;
+        color: #ffffff;
+        font-size: 14px; /* Fuente más pequeña */
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 80px; /* Tamaño del botón ajustado */
+    }
+
+    .copy-btn:hover {
+        background-color: #00c7ff;
+        color: #003366;
+    }
 }
-
-/* Works
-    - IA HEX
-    - MEMORY
-    - C4 THE GAME
-    - PETSALUT
-    - MULTICHANNEL CHAT
-    - 3D GARAGE
-
-    */

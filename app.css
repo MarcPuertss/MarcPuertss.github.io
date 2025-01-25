@@ -871,8 +871,8 @@ html, body {
         background-color: #f0f8ff;
         border-radius: 15px;
         max-width: 100%; /* Asegura que no se desborde */
-        width: 60%; /* Ajusta el ancho relativo */
-        margin-left: 12%;
+        width: 70%; /* Ajusta el ancho relativo */
+        margin-left: 6%;
         padding: 40px; /* Espaciado interno */
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
        

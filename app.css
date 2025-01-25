@@ -765,6 +765,19 @@ body {
         align-items: center;
         
     }
+    .name::after {
+        content: '';
+        display: block;
+        width: 60%;
+        height: 2px;
+        background-color: #87CEEB; /* Azul cielo */
+        margin: 0 auto;
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        right: 0;
+    }
+    
 
     .role {
         font-size: 1.2rem;

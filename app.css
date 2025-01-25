@@ -803,10 +803,38 @@ body {
         border-radius: 2px;
     }
 
-    .about-image {
-        margin-top: 20px;
-        align-items: center;
-        margin-left: 0%;
+    .about-image img {
+        width: auto; /* Deja que la imagen mantenga su tamaño natural */
+        max-width: 100%; /* Asegura que la imagen no se desborde */
+    }
+    /* .about-title para pantallas pequeñas */
+    .about-title {
+        text-align: center; /* Centrar el título */
+        margin-bottom: 20px; /* Menos espacio inferior */
+    }
+
+    .about-title h2 {
+        font-size: 2rem; /* Reducir tamaño de fuente */
+    }
+
+    .about-title h2::after {
+        width: 60px; /* Reducir longitud de la línea */
+    }
+
+    /* .works-title para pantallas pequeñas */
+    .works-title {
+        text-align: center; /* Centrar el título */
+        margin-bottom: 20px; /* Menos espacio inferior */
+        margin-left: 0; /* Eliminar el margen izquierdo */
+        margin-right: 0; /* Eliminar el margen derecho */
+    }
+
+    .works-title h2 {
+        font-size: 2rem; /* Reducir tamaño de fuente */
+    }
+
+    .works-title h2::after {
+        width: 60px; /* Reducir longitud de la línea */
     }
 
     .projects-container {
@@ -854,7 +882,7 @@ body {
     }
 
     .email-box {
-        margin-left: -9%;
+        margin-left: -0%;
         border: 2px solid #003366;
         border-radius: 5px;
         overflow: hidden;
@@ -876,7 +904,7 @@ body {
 
     .copy-btn {
         padding: 10px;
-        margin-left: 1.5%;
+        margin-left: 1.78%;
         background-color: #003366;
         color: #ffffff;
         font-size: 14px; /* Fuente más pequeña */

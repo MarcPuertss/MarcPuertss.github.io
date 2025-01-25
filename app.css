@@ -288,12 +288,12 @@ html, body {
 /* Estilos de botones específicos */
 .linkedin {
     background-color: #0072b1; /* Azul LinkedIn */
-    margin-left: 70px;
+    margin-left: 25px;
 }
 
 .github {
     background-color: #333; /* Negro GitHub */
-    margin-left: 70px;
+    margin-left: 25px;
 }
 
 .button:hover {
@@ -870,12 +870,13 @@ html, body {
     .contact-container {
         background-color: #f0f8ff;
         border-radius: 15px;
-        padding: 5px; /* Espaciado ajustado */
-        max-width: 100%; /* Ancho al 100% */
-        width: 70%; /* Ajusta el ancho para pantallas más pequeñas */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        max-width: 100%; /* Asegura que no se desborde */
+        width: 60%; /* Ajusta el ancho relativo */
+        margin-left: 12%;
+        padding: 40px; /* Espaciado interno */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+       
     }
-
     .contact-title {
         text-align: left; /* Alinea el título a la izquierda */
         margin-bottom: 20px;

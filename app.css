@@ -34,6 +34,11 @@ html, body {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+.links{
+    margin-left: 14%;
+}
+
 .name_sidebar{
     color:#ffffff;
     margin-top: 20px;
@@ -872,7 +877,7 @@ html, body {
         border-radius: 15px;
         max-width: 100%; /* Asegura que no se desborde */
         width: 70%; /* Ajusta el ancho relativo */
-        margin-left: 6%;
+        margin-left: 0%;
         padding: 40px; /* Espaciado interno */
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
        
@@ -883,7 +888,7 @@ html, body {
     }
 
     .contact-title h2 {
-        font-size: 2rem; /* Tamaño de fuente ajustado */
+        font-size: 1.5rem; /* Tamaño de fuente ajustado */
         font-weight: bold;
         color: #003366;
         margin: 0;
@@ -896,7 +901,7 @@ html, body {
     }
 
     .email-box {
-        margin-left: -0%;
+        margin-left: -10%;
         border: 2px solid #003366;
         border-radius: 5px;
         overflow: hidden;
@@ -932,5 +937,8 @@ html, body {
     .copy-btn:hover {
         background-color: #00c7ff;
         color: #003366;
+    }
+    .links{
+        margin-left: 0%;
     }
 }

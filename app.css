@@ -863,81 +863,89 @@ html, body {
         max-width: calc(100% - 40px); /* Ajustar max-width para pantallas más pequeñas */
     }
 
-    .contact-section {
-        padding: 30px 15px; /* Menos padding para pantallas pequeñas */
-        background-image: url("sources/920.jpg");
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        color: #003366;
-    }
+/* Ajuste de la sección de contacto */
+.contact-section {
+    padding: 50px 0; /* Menos espacio arriba y abajo */
+    background-image: url("sources/920.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #003366;
+    display: flex;
+    justify-content: center;
+}
 
-    .contact-container {
-        background-color: #f0f8ff;
-        border-radius: 15px;
-        max-width: 100%; /* Asegura que no se desborde */
-        width: 70%; /* Ajusta el ancho relativo */
-        margin-left: 0%;
-        padding: 40px; /* Espaciado interno */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
-       
-    }
-    .contact-title {
-        text-align: left; /* Alinea el título a la izquierda */
-        margin-bottom: 20px;
-    }
+/* Contenedor centrado */
+.contact-container {
+    background-color: #f0f8ff;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px; /* Ajustado para que no sea muy grande */
+    padding: 20px; /* Menos espacio interno */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
 
-    .contact-title h2 {
-        font-size: 1.5rem; /* Tamaño de fuente ajustado */
-        font-weight: bold;
-        color: #003366;
-        margin: 0;
-    }
+/* Ajuste del título */
+.contact-title h2 {
+    font-size: 1.8rem; /* Un poco más pequeño */
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 10px;
+}
 
-    .contact-title h2::after {
-        width: 100%; /* Línea más corta para pantallas pequeñas */
-        height: 2px; /* Grosor de la línea */
-        margin-top: 10px;
-    }
+/* Línea bajo el título */
+.contact-title h2::after {
+    content: "";
+    display: block;
+    width: 80px; /* Más corto */
+    height: 3px;
+    background: #00c7ff;
+    margin: 5px auto 15px; /* Espaciado mejorado */
+    border-radius: 2px;
+}
 
-    .email-box {
-        margin-left: -10%;
-        border: 2px solid #003366;
-        border-radius: 5px;
-        overflow: hidden;
-        margin-top: 15px;
-        width: 110%; /* Hacer el cuadro de correo más grande */
-        max-width: 110%;
-        background-color: #ffffff;
+/* Caja de email alineada */
+.email-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #003366;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 5px;
+    width: 100%;
+}
 
-    }
+/* Input del email */
+.email-box input {
+    border: none;
+    outline: none;
+    width: 75%;
+    padding: 8px;
+    font-size: 14px;
+    color: #003366;
+    background-color: transparent;
+}
 
-    .email-box input {
-        padding: 10px;
-        font-size: 14px; /* Tamaño de fuente más pequeño */
-        width: calc(100% - 110px); /* Ajusta el tamaño del input */
-        color: #003366;
-        background-color: transparent;
-        cursor: text;
-    }
+/* Botón de copiar */
+.copy-btn {
+    padding: 8px;
+    background-color: #003366;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 80px;
+}
 
-    .copy-btn {
-        padding: 10px;
-        margin-left: 1.78%;
-        background-color: #003366;
-        color: #ffffff;
-        font-size: 14px; /* Fuente más pequeña */
-        font-weight: bold;
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        width: 80px; /* Tamaño del botón ajustado */
-    }
+.copy-btn:hover {
+    background-color: #00c7ff;
+    color: #003366;
+}
 
-    .copy-btn:hover {
-        background-color: #00c7ff;
-        color: #003366;
-    }
     .links{
         margin-left: 0%;
     }

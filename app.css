@@ -1,28 +1,28 @@
 html, body {
-    overflow-x: hidden; /* Oculta el desbordamiento horizontal */
-    max-width: 100vw; /* Evita que elementos puedan exceder el ancho de la ventana */
+    overflow-x: hidden; 
+    max-width: 100vw; 
     margin: 0;
     padding: 0;
     font-family: 'Lora', serif;
-    background-color: #f0f8ff; /* Azul celeste */
-    color: #003366; /* Azul oscuro */
+    background-color: #f0f8ff; 
+    color: #003366; 
     line-height: 1.6;
 }
-/* Barra de navegación superior */
+
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 51, 102, 0.8); /* Azul oscuro con transparencia */
+    background-color: rgba(0, 51, 102, 0.8); 
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease; /* Animación suave usando transform */
-    transform: translateY(-100%); /* Inicialmente fuera de la pantalla */
+    transition: transform 0.3s ease; 
+    transform: translateY(-100%); 
 }
 
 .header.active {
-    transform: translateY(0); /* Cuando tiene la clase active, se desliza hacia abajo */
+    transform: translateY(0); 
 }
 
 
@@ -51,9 +51,9 @@ html, body {
 .name_sidebar::after {
     content: "";
     display: block;
-    width: 435px; /* Longitud de la línea */
-    height: 4px; /* Grosor de la línea */
-    background: #00c7ff; /* Azul celeste */
+    width: 435px;
+    height: 4px; 
+    background: #00c7ff; 
     margin-top: 8px;
     border-radius: 2px;
 }
@@ -65,7 +65,6 @@ html, body {
     text-transform: uppercase;
 }
 
-/* Estilos de los enlaces de navegación */
 .nav-links {
     display: flex;
     list-style: none;
@@ -99,118 +98,106 @@ html, body {
     transform: scale(1.05);
 }
 
-/* Barra lateral (oculta por defecto) */
 .side-nav {
     position: fixed;
     top: 0;
-    right: -250px; /* Inicialmente fuera de la pantalla */
+    right: -250px;
     width: 250px;
     height: 100%;
     background-color: rgba(0, 51, 102, 0.8);
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: right 0.3s ease; /* Animación suave */
+    transition: right 0.3s ease; 
 }
 
 .side-nav.active {
-    right: 0; /* Cuando está activa, se desliza desde la derecha */
+    right: 0;
 }
 
-/* Barra lateral (oculta por defecto) */
 .side-nav {
     position: fixed;
     top: 0;
-    right: -250px; /* Inicialmente fuera de la pantalla */
+    right: -250px; 
     width: 250px;
     height: 100%;
-    background-color: rgba(0, 51, 102, 0.9); /* Color de fondo más oscuro */
+    background-color: rgba(0, 51, 102, 0.9); 
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombras para el efecto de profundidad */
-    transition: right 0.3s ease; /* Animación suave */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+    transition: right 0.3s ease; 
     display: flex;
-    flex-direction: column; /* Organizar los elementos de arriba hacia abajo */
+    flex-direction: column; 
 }
 
-/* Estilos para los enlaces dentro de la barra lateral */
 .side-nav .nav-links {
     display: flex;
     flex-direction: column;
     list-style: none;
     margin: 0;
     padding: 0;
-    width: 100%; /* Asegurarse que los botones ocupen todo el ancho */
+    width: 100%; 
 }
 
-/* Estilo para cada botón en la barra lateral */
 .side-nav .nav-links li {
-    margin: 15px 0; /* Separación entre botones */
+    margin: 15px 0; 
 }
 
-/* Estilo de los enlaces */
 .side-nav .nav-links a {
     display: block;
     padding: 15px 20px;
     text-align: center;
-    background-color: #003366; /* Color de fondo */
+    background-color: #003366; 
     color: white;
     font-weight: bold;
     font-size: 18px;
     text-transform: uppercase;
-    border-radius: 8px; /* Bordes redondeados */
-    transition: all 0.3s ease; /* Animación suave */
+    border-radius: 8px;
+    transition: all 0.3s ease;
     text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras sutiles para efecto de profundidad */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
-/* Efecto hover en los botones */
 .side-nav .nav-links a:hover {
-    background-color: #00c7ff; /* Fondo azul claro al pasar el ratón */
-    color: #003366; /* Texto en color oscuro al pasar el ratón */
-    transform: translateY(-4px); /* Efecto de "subir" al pasar el ratón */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+    background-color: #00c7ff; 
+    color: #003366; 
+    transform: translateY(-4px); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
 }
 
-/* Efecto activo del botón (cuando se está en la sección) */
 .side-nav .nav-links a.active {
-    background-color: #00c7ff; /* Fondo azul claro para el enlace activo */
-    color: #003366; /* Texto en color oscuro cuando está activo */
-    transform: scale(1.05); /* Efecto de tamaño para indicar que es el enlace activo */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en el activo */
+    background-color: #00c7ff; 
+    color: #003366;
+    transform: scale(1.05); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo para los enlaces sociales */
 .side-nav .social-links {
-    margin-top: auto; /* Asegura que los iconos queden al final */
-    display: flex; /* Usamos flexbox para alinear los iconos */
-    justify-content: center; /* Centramos los iconos horizontalmente */
-    gap: 15px; /* Espacio entre los iconos */
-    padding: 20px 0; /* Espaciado para separar los iconos de los otros enlaces */
+    margin-top: auto; 
+    display: flex;
+    justify-content: center; 
+    gap: 15px; 
+    padding: 20px 0; 
 }
 
-/* Estilo para los iconos de las redes sociales */
 .side-nav .social-icon {
     display: block;
-    width: 40px; /* Tamaño más pequeño */
-    height: 40px; /* Tamaño más pequeño */
-    background-color: #003366; /* Fondo oscuro */
+    width: 40px; 
+    height: 40px; 
+    background-color: #003366; 
     color: white;
-    font-size: 20px; /* Ajustamos el tamaño del icono */
-    border-radius: 50%; /* Botón circular */
+    font-size: 20px; 
+    border-radius: 50%; 
     display: flex;
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Efecto hover para los iconos sociales */
+
 .side-nav .social-icon:hover {
-    background-color: #00c7ff; /* Cambio a azul claro al pasar el ratón */
-    transform: scale(1.1); /* Aumenta el tamaño del icono al pasar el ratón */
+    background-color: #00c7ff; 
+    transform: scale(1.1); 
 }
 
-
-
-/* Sección Home */
 .home-section {
     display: flex;
     align-items: center;
@@ -220,7 +207,7 @@ html, body {
     background-image: url('sources/dynamic-hex-backgrounds-networking.jpg'); /* Cambia a la ruta de tu imagen de fondo */
     background-size: cover;
     background-position: center;
-    color: #fff; /* Blanco para mayor contraste */
+    color: #fff; 
 }
 
 .home-container {
@@ -232,16 +219,14 @@ html, body {
     padding: 40px;
 }
 
-/* Imagen personal */
 .profile-image img {
     border-radius: 50%;
     width: 400px;
     height: 400px;
     object-fit: cover;
-    border: 4px solid #00c7ff; /* Azul celeste */
+    border: 4px solid #00c7ff; 
 }
 
-/* Información personal */
 .profile-info {
     text-align: left;
     color: #ffffff;
@@ -258,22 +243,22 @@ html, body {
 .name::after {
     content: "";
     display: block;
-    width: 435px; /* Longitud de la línea */
-    height: 4px; /* Grosor de la línea */
-    background: #00c7ff; /* Azul celeste */
+    width: 435px; 
+    height: 4px;
+    background: #00c7ff; 
     margin-top: 8px;
     border-radius: 2px;
 }
 
-/* Información adicional */
+
 .role {
     font-size: 1.8rem;
-    color: #ffffff; /* Azul celeste */
+    color: #ffffff; 
     margin-bottom: 25px;
     margin-left: 65px;
 }
 
-/* Enlaces */
+
 .links {
     display: flex;
     gap: 20px;
@@ -290,14 +275,14 @@ html, body {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Estilos de botones específicos */
+
 .linkedin {
-    background-color: #0072b1; /* Azul LinkedIn */
+    background-color: #0072b1; 
     margin-left: 25px;
 }
 
 .github {
-    background-color: #333; /* Negro GitHub */
+    background-color: #333; 
     margin-left: 25px;
 }
 
@@ -306,11 +291,11 @@ html, body {
     transform: translateY(-2px);
 }
 
-/* Sección About Me */
+
 .about-section {
     padding: 80px 20px;
-    background-color: #f0f8ff; /* Azul claro */
-    color: #003366; /* Azul oscuro */
+    background-color: #f0f8ff; 
+    color: #003366; 
 }
 
 .about-container {
@@ -334,9 +319,9 @@ html, body {
 .about-title h2::after {
     content: "";
     display: block;
-    width: 100px; /* Longitud de la línea */
-    height: 4px; /* Grosor de la línea */
-    background: #00c7ff; /* Azul celeste */
+    width: 100px; 
+    height: 4px; 
+    background: #00c7ff; 
     margin-top: 10px;
     border-radius: 2px;
 }
@@ -350,7 +335,7 @@ html, body {
 
 .about-info {
     flex: 1;
-    padding-right: 60px; /* Espacio entre el texto y la línea */
+    padding-right: 60px; 
     position: relative;
 }
 
@@ -358,7 +343,7 @@ html, body {
     content: "";
     position: absolute;
     top: 0;
-    right: 0; /* La línea queda alineada al contenedor */
+    right: 0; 
     width: 4px;
     height: 100%;
     background: #00c7ff;
@@ -369,7 +354,7 @@ html, body {
     font-size: 1.2rem;
     line-height: 1.8;
     margin-bottom: 20px;
-    color: #333; /* Gris oscuro */
+    color: #333; 
 }
 
 .about-image {
@@ -384,10 +369,9 @@ html, body {
     height: 583px;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
-/* Sección de Proyectos */
 .works-section {
     padding: 50px 20px;
     background-image: url("sources/920.jpg");
@@ -397,14 +381,14 @@ html, body {
     color: #fff;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centrar contenido horizontalmente */
+    align-items: center; 
 }
 
 .works-title {
-    text-align: center; /* Centrar el título */
+    text-align: center;
     margin-bottom: 40px;
-    margin-left: 100px; /* Mueve las tarjetas más a la izquierda */
-    margin-right: auto; /* Mantiene el contenedor centrado */
+    margin-left: 100px; 
+    margin-right: auto;
 }
 
 .works-title h2 {
@@ -417,21 +401,21 @@ html, body {
 .works-title h2::after {
     content: "";
     display: block;
-    width: 100px; /* Longitud de la línea */
-    height: 4px; /* Grosor de la línea */
-    background: #00c7ff; /* Azul celeste */
+    width: 100px; 
+    height: 4px; 
+    background: #00c7ff; 
     margin-top: 10px;
     border-radius: 2px;
 }
 
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);  /* 2 columnas */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 30px;
-    max-width: 1400px; /* Ancho máximo más amplio */
+    max-width: 1400px; 
     width: 100%; 
-    margin-left: 100px; /* Mueve las tarjetas más a la izquierda */
-    margin-right: auto; /* Mantiene el contenedor centrado */
+    margin-left: 100px; 
+    margin-right: auto; 
 }
 
 .project-card {
@@ -444,7 +428,7 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 550px; /* Aumenta la altura de las tarjetas */
+    min-height: 550px; 
 }
 
 .project-card h3 {
@@ -507,15 +491,15 @@ html, body {
     display: inline-block;
     background-color: #24292e;
     color: white;
-    padding: 5px 10px; /* Reduce el tamaño del botón */
+    padding: 5px 10px;
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 12px; /* Fuente más pequeña */
+    font-size: 12px; 
     font-weight: bold;
     margin-top: 10px;
-    margin-left: auto; /* Empuja el botón hacia la derecha */
-    align-self: flex-end; /* Asegura que esté a la derecha dentro del contenedor flexible */
+    margin-left: auto; 
+    align-self: flex-end;
     transition: background-color 0.3s ease;
 }
 
@@ -523,35 +507,30 @@ html, body {
     background-color: #0366d6;
 }
 
-
-/* Estilos generales de la sección de contacto */
-/* Estilos generales de la sección de contacto */
 .contact-section {
     padding: 50px 20px;
-    background-image: url("sources/920.jpg"); /* Mismo fondo que la sección Works */
+    background-image: url("sources/920.jpg"); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    color: #003366; /* Asegura que el texto sea legible sobre la imagen */
+    color: #003366; 
 }
 
-/* Contenedor azul cielo */
 .contact-container {
     display: flex;
-    flex-direction: column; /* Organiza los elementos de arriba hacia abajo */
-    justify-content: center; /* Centrado de los elementos verticalmente */
-    align-items: center; /* Centrado de los elementos horizontalmente */
-    background-color: #f0f8ff; /* Azul claro */
-    border-radius: 15px; /* Bordes redondeados */
-    padding: 40px; /* Espaciado interno */
-    max-width: 600px; /* Ancho máximo del cuadro */
-    width: 100%; /* Ajusta el contenedor al ancho máximo, con límite */
-    margin: 0 auto; /* Centra el contenedor en la página */
-    margin-left: 25%; /* Mueve el contenedor ligeramente hacia la izquierda */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para realce */
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f8ff;
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto; 
+    margin-left: 25%; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
 }
 
-/* Título de la sección */
 .contact-title {
     text-align: center;
     margin-bottom: 40px;
@@ -567,15 +546,13 @@ html, body {
 .contact-title h2::after {
     content: "";
     display: block;
-    width: 430px; /* Longitud de la línea */
-    height: 4px; /* Grosor de la línea */
-    background: #00c7ff; /* Azul celeste */
+    width: 430px; 
+    height: 4px; 
+    background: #00c7ff; 
     margin-top: 10px;
     border-radius: 2px;
 }
 
-
-/* Estilo del cuadro de correo */
 .email-box {
     align-items: center;
     border: 2px solid #003366;
@@ -602,7 +579,6 @@ html, body {
     outline: none;
 }
 
-/* Estilo del botón de copiar */
 .copy-btn {
     padding: 10px 15px;
     background-color: #003366;
@@ -619,58 +595,50 @@ html, body {
     color: #003366;
 }
 
-
-/* Agregar estilo para el menú hamburguesa */
 .menu-icon {
-    display: none; /* Solo aparecerá en pantallas pequeñas */
+    display: none; 
     font-size: 2rem;
     cursor: pointer;
-    color: #fff; /* Ajusta según el diseño */
+    color: #fff; 
     margin-right: 20px;
 }
 
 @media (max-width: 768px) {
-    /* Mostrar el menú hamburguesa en pantallas pequeñas */
     .menu-icon {
         display: block;
     }
 
-    /* Ocultar enlaces en la barra superior */
     .nav-links {
-        display: none; /* Ocultamos los enlaces de la barra superior en pantallas pequeñas */
+        display: none; 
     }
 
-    /* Mostrar enlaces cuando la barra lateral está activa */
     .side-nav {
         position: fixed;
         top: 0;
-        right: -250px; /* Inicialmente fuera de la pantalla a la derecha */
+        right: -250px; 
         width: 250px;
         height: 100%;
-        background-color: rgba(0, 51, 102, 0.9); /* Fondo oscuro */
+        background-color: rgba(0, 51, 102, 0.9);
         z-index: 1000;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-        transition: right 0.3s ease; /* Animación suave */
+        transition: right 0.3s ease; 
         display: flex;
         flex-direction: column;
     }
 
-    /* Cuando la barra lateral está activa, se desliza desde la derecha */
     .side-nav.active {
         right: 0;
     }
 
-    /* Contenedor del nombre dentro de la barra lateral */
     .side-nav .name-container {
         text-align: center;
-        margin-top: 30px; /* Espacio para que no esté pegado al borde superior */
+        margin-top: 30px; 
         display: flex;
         flex-direction: column;
         justify-content: center;
         flex: 1;
     }
 
-    /* Estilo del nombre dentro de la barra lateral */
     .side-nav .name {
         font-size: 1.5rem;
         color: white;
@@ -679,7 +647,6 @@ html, body {
         text-transform: uppercase;
     }
 
-    /* Estilo de los enlaces en la barra lateral */
     .side-nav .nav-links {
         display: flex;
         flex-direction: column;
@@ -690,7 +657,7 @@ html, body {
     }
 
     .side-nav .nav-links li {
-        margin: 15px 0; /* Separación entre enlaces */
+        margin: 15px 0; 
     }
 
     .side-nav .nav-links a {
@@ -707,7 +674,6 @@ html, body {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    /* Efecto hover en los enlaces de la barra lateral */
     .side-nav .nav-links a:hover {
         background-color: #00c7ff;
         color: #003366;
@@ -715,7 +681,6 @@ html, body {
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     }
 
-    /* Enlace activo dentro de la barra lateral */
     .side-nav .nav-links a.active {
         background-color: #00c7ff;
         color: #003366;
@@ -723,12 +688,10 @@ html, body {
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
 
-    /* Mostrar el menú hamburguesa en pantallas pequeñas */
     .menu-icon {
         display: block;
     }
 
-    /* Aseguramos que el nombre esté centrado en la barra superior */
     .navbar .name {
         flex: 1;
         text-align: center;
@@ -741,7 +704,7 @@ html, body {
         display: block;
         width: 40%;
         height: 2px;
-        background-color: #87CEEB; /* Azul cielo */
+        background-color: #87CEEB; 
         margin: 0 auto;
         position: absolute;
         bottom: -8px;
@@ -758,7 +721,7 @@ html, body {
         width: 275px;
         height: 275px;
         object-fit: cover;
-        border: 4px solid #00c7ff; /* Azul celeste */
+        border: 4px solid #00c7ff; 
     }
 
     .profile-info {
@@ -776,7 +739,7 @@ html, body {
         display: block;
         width: 60%;
         height: 2px;
-        background-color: #87CEEB; /* Azul cielo */
+        background-color: #87CEEB; 
         margin: 0 auto;
         position: absolute;
         bottom: -8px;
@@ -791,10 +754,10 @@ html, body {
         margin-left: 0%;
         margin-top: 15px;
         font-weight: bold;
-        color: white; /* Color del texto */
+        color: white; 
         text-shadow: 
-            1px 1px 0 #000000,   /* Sombra para el borde 1 (efecto exterior) */
-            -1px -1px 0 #070707, /* Sombra para el borde 2 (efecto exterior) */
+            1px 1px 0 #000000,   
+            -1px -1px 0 #070707,
             1px -1px 0 #24292e, 
             -1px 1px 0 #24292e; 
     }
@@ -802,11 +765,11 @@ html, body {
     
     .about-content {
         flex-direction: column;
-        align-items: flex-start; /* Alinea todo el contenido a la izquierda */
+        align-items: flex-start; 
     }
     
     .about-info {
-        text-align: left; /* Alinea el texto a la izquierda */
+        text-align: left; 
         padding-right: 20px;
         border-right: none;
     }
@@ -815,7 +778,7 @@ html, body {
         content: "";
         position: absolute;
         top: 0;
-        right: 0; /* La línea queda alineada al contenedor */
+        right: 0; 
         width: 4px;
         height: 100%;
         background: #00c7ff;
@@ -823,89 +786,82 @@ html, body {
     }
 
     .about-image img {
-        width: auto; /* Deja que la imagen mantenga su tamaño natural */
-        max-width: 100%; /* Asegura que la imagen no se desborde */
+        width: auto; 
+        max-width: 100%; 
     }
-    /* .about-title para pantallas pequeñas */
+
     .about-title {
-        text-align: center; /* Centrar el título */
-        margin-bottom: 20px; /* Menos espacio inferior */
+        text-align: center;
+        margin-bottom: 20px; 
     }
 
     .about-title h2 {
-        font-size: 2rem; /* Reducir tamaño de fuente */
+        font-size: 2rem; 
     }
 
     .about-title h2::after {
-        width: 60px; /* Reducir longitud de la línea */
+        width: 60px;
     }
 
-    /* .works-title para pantallas pequeñas */
     .works-title {
-        text-align: center; /* Centrar el título */
-        margin-bottom: 20px; /* Menos espacio inferior */
-        margin-left: 0; /* Eliminar el margen izquierdo */
-        margin-right: 0; /* Eliminar el margen derecho */
+        text-align: center; 
+        margin-bottom: 20px;
+        margin-left: 0;
+        margin-right: 0; 
     }
 
     .works-title h2 {
-        font-size: 2rem; /* Reducir tamaño de fuente */
+        font-size: 2rem; 
     }
 
     .works-title h2::after {
-        width: 60px; /* Reducir longitud de la línea */
+        width: 60px; 
     }
 
     .projects-container {
-        grid-template-columns: 1fr;  /* 1 columna en pantallas pequeñas */
-        margin-left: 20px;   /* Ajustar margen para pantallas más pequeñas */
-        margin-right: 20px;  /* Ajustar margen para pantallas más pequeñas */
-        max-width: calc(100% - 40px); /* Ajustar max-width para pantallas más pequeñas */
+        grid-template-columns: 1fr;
+        margin-left: 20px;
+        margin-right: 20px; 
+        max-width: calc(100% - 40px);
     }
 
-/* Ajuste de la sección de contacto */
 .contact-section {
-    padding: 50px 0; /* Menos espacio arriba y abajo */
+    padding: 50px 0; 
     background-image: url("sources/920.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     color: #003366;
-    display: flex;
-    justify-content: center;
+   
 }
 
-/* Contenedor centrado */
 .contact-container {
     background-color: #f0f8ff;
+    margin-left: 1.5%;
     border-radius: 15px;
     width: 90%;
-    max-width: 400px; /* Ajustado para que no sea muy grande */
-    padding: 20px; /* Menos espacio interno */
+    padding: 20px; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-/* Ajuste del título */
 .contact-title h2 {
-    font-size: 1.8rem; /* Un poco más pequeño */
+    font-size: 1.8rem; 
     font-weight: bold;
     color: #003366;
     margin-bottom: 10px;
 }
 
-/* Línea bajo el título */
 .contact-title h2::after {
     content: "";
     display: block;
-    width: 80px; /* Más corto */
+    width: 80px; 
     height: 3px;
     background: #00c7ff;
-    margin: 5px auto 15px; /* Espaciado mejorado */
+    margin: 5px auto 15px; 
     border-radius: 2px;
 }
 
-/* Caja de email alineada */
 .email-box {
     display: flex;
     align-items: center;
@@ -913,11 +869,11 @@ html, body {
     border: 2px solid #003366;
     border-radius: 5px;
     background-color: #ffffff;
+    margin-left: 1%;
     padding: 5px;
     width: 100%;
 }
 
-/* Input del email */
 .email-box input {
     border: none;
     outline: none;
@@ -928,7 +884,6 @@ html, body {
     background-color: transparent;
 }
 
-/* Botón de copiar */
 .copy-btn {
     padding: 8px;
     background-color: #003366;

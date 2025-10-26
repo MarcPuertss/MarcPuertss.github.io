@@ -113,3 +113,15 @@ function copyToClipboard() {
         alert("Email copied to clipboard!");
     });
 }
+
+
+// Animación mostrar/ocultar skills
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleSkills = document.getElementById("toggle-skills");
+    const skillsContainer = document.getElementById("skills-container");
+
+    toggleSkills.addEventListener("click", () => {
+        skillsContainer.classList.toggle("active");
+        toggleSkills.querySelector("i").classList.toggle("rotated");
+    });
+});
